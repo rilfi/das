@@ -1,0 +1,25 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('SplitAndPersist')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('InputStream:1.0.0')
+define stream RealtimeIO (ID string, product string, uc1 string, state string, brand string, model string, type string,tweet string);
+
+@Export('v2BuyFull3:1.0.0')
+define stream v2 (ID string, product string, uc1 string, state string, brand string, model string, type string,timeStamp String);
+
+@Export('v1SaleFull3:1.0.0')
+define stream v1 (ID string, product string, uc1 string, state string, brand string, model string, type string,timeStamp String);
+
+
+from RealtimeIO[ state == "sell"]#window.time(1 min)
+select ID , product , uc1 , state , brand , model , type , time:currentTimestamp() as timeStamp
+insert into v1;
+
+from RealtimeIO[ state =="buy"]#window.time(1 min)
+select ID , product , uc1 , state , brand , model , type ,time:currentTimestamp()  as timeStamp
+insert into v2;

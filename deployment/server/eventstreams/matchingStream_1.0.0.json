@@ -1,0 +1,64 @@
+{
+  "name": "matchingStream",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "rID",
+      "type": "STRING"
+    },
+    {
+      "name": "rproduct",
+      "type": "STRING"
+    },
+    {
+      "name": "ruc1",
+      "type": "STRING"
+    },
+    {
+      "name": "rstate",
+      "type": "STRING"
+    },
+    {
+      "name": "rbrand",
+      "type": "STRING"
+    },
+    {
+      "name": "rmodel",
+      "type": "STRING"
+    },
+    {
+      "name": "rtype",
+      "type": "STRING"
+    },
+{
+      "name": "hID",
+      "type": "STRING"
+    },
+    {
+      "name": "hproduct",
+      "type": "STRING"
+    },
+    {
+      "name": "huc1",
+      "type": "STRING"
+    },
+    {
+      "name": "hstate",
+      "type": "STRING"
+    },
+    {
+      "name": "hbrand",
+      "type": "STRING"
+    },
+    {
+      "name": "hmodel",
+      "type": "STRING"
+    },
+    {
+      "name": "htype",
+      "type": "STRING"
+    }
+  ]
+}

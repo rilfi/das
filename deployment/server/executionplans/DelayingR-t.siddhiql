@@ -1,0 +1,19 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('DelayingR-t')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('InputStream:1.0.0')
+define stream rt (ID string, product string, uc1 string, state string, brand string, model string, type string, tweet string);
+
+@Export('InputStreamToPersist:1.0.0')
+define stream ds (ID string, product string, uc1 string, state string, brand string, model string, type string, tweet string);
+
+from rt #window.time(1 min)
+select *
+insert expired events into ds
+
+

@@ -1,0 +1,36 @@
+{
+  "name": "RelatedStreamSale",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "ID",
+      "type": "STRING"
+    },
+    {
+      "name": "product",
+      "type": "STRING"
+    },
+    {
+      "name": "uc1",
+      "type": "STRING"
+    },
+    {
+      "name": "state",
+      "type": "STRING"
+    },
+    {
+      "name": "brand",
+      "type": "STRING"
+    },
+    {
+      "name": "model",
+      "type": "STRING"
+    },
+    {
+      "name": "type",
+      "type": "STRING"
+    }
+  ]
+}

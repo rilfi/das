@@ -1,0 +1,24 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('compineRelated_S+B')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+
+@Import('RelatedStreamBuy:1.0.0')
+define stream rsb (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+@Import('RelatedStreamSale:1.0.0')
+define stream rss (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+@Export('RelatedStream:1.0.0')
+define stream rs (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+from rsb
+select ID , product , uc1 , state , brand , model , type 
+insert into rs;
+from rss
+select ID , product , uc1 , state , brand , model , type 
+insert into rs;

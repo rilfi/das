@@ -1,0 +1,763 @@
+TID: [-1234] [] [2016-05-02 11:15:28,088]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 11:17:36,491]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 11:21:16,109]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 11:31:41,100]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 12:02:24,225]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 12:12:55,057]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'admin@carbon.super [-1234]' logged in at [2016-05-02 12:12:55,054+0530] {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil}
+TID: [-1234] [] [2016-05-02 12:15:45,567] ERROR {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Record Count/Page size is ZERO!. Please set Record count/Page size. {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+TID: [-1234] [] [2016-05-02 12:15:45,732] ERROR {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Error in index search: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+java.lang.IllegalArgumentException: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:170)
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:154)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.getTopDocsCollector(AnalyticsDataIndexer.java:525)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.doSearch(AnalyticsDataIndexer.java:470)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.search(AnalyticsDataIndexer.java:447)
+	at org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl.search(AnalyticsDataServiceImpl.java:977)
+	at org.wso2.carbon.analytics.dataservice.core.SecureAnalyticsDataServiceImpl.search(SecureAnalyticsDataServiceImpl.java:229)
+	at org.wso2.carbon.analytics.api.CarbonAnalyticsAPI.search(CarbonAnalyticsAPI.java:661)
+	at org.wso2.carbon.analytics.restapi.resources.AnalyticsResource.search(AnalyticsResource.java:727)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:188)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:104)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:204)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:94)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:272)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:249)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:248)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:222)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:153)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:171)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:289)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:209)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:265)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:613)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.event.receiver.core.internal.tenantmgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:48)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+TID: [-1234] [] [2016-05-02 12:15:45,759] ERROR {org.wso2.carbon.analytics.restapi.providers.AnalyticsIndexExceptionMapper} -  Error accessing Analytics Indexing REST APIs {org.wso2.carbon.analytics.restapi.providers.AnalyticsIndexExceptionMapper}
+org.wso2.carbon.analytics.dataservice.commons.exception.AnalyticsIndexException: Error in index search: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.doSearch(AnalyticsDataIndexer.java:484)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.search(AnalyticsDataIndexer.java:447)
+	at org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl.search(AnalyticsDataServiceImpl.java:977)
+	at org.wso2.carbon.analytics.dataservice.core.SecureAnalyticsDataServiceImpl.search(SecureAnalyticsDataServiceImpl.java:229)
+	at org.wso2.carbon.analytics.api.CarbonAnalyticsAPI.search(CarbonAnalyticsAPI.java:661)
+	at org.wso2.carbon.analytics.restapi.resources.AnalyticsResource.search(AnalyticsResource.java:727)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:188)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:104)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:204)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:94)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:272)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:249)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:248)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:222)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:153)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:171)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:289)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:209)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:265)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:613)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.event.receiver.core.internal.tenantmgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:48)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:170)
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:154)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.getTopDocsCollector(AnalyticsDataIndexer.java:525)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.doSearch(AnalyticsDataIndexer.java:470)
+	... 55 more
+TID: [-1234] [] [2016-05-02 12:32:49,214]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 12:33:41,539]  INFO {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker} -  v1SaleFull3_1.0.0.json is deleted from the file system {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker}
+TID: [-1234] [] [2016-05-02 12:33:41,542]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream Definition was undeployed successfully : v1SaleFull3_1.0.0.json {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,553]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,572]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : SplitAndPersist.siddhiql, Dependency validation exception: Stream v1SaleFull3:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,573]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_sale.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,582]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :mysql_sale.xml, Stream validation exception : Stream v1SaleFull3:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,583]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : mysql_sale  is in inactive state because stream dependency could not be found : v1SaleFull3:1.0.0 {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 12:33:41,588]  INFO {org.wso2.carbon.event.stream.core.internal.CarbonEventStreamService} -  Stream definition - v1SaleFull3:1.0.0 removed successfully {org.wso2.carbon.event.stream.core.internal.CarbonEventStreamService}
+TID: [-1234] [] [2016-05-02 12:33:41,591]  INFO {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker} -  Stream definition configuration for v1SaleFull3:1.0.0 saved in the filesystem {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker}
+TID: [-1234] [] [2016-05-02 12:33:41,594]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,627]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:33:41,628]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:33:41,660]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:33:41,660]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : SplitAndPersist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,661]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_sale.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,662]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:33:41,688]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : mysql_sale {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:33:41,688]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 12:33:43,019]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Undeploying analytics event store: /home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/eventsink/v1SaleFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:33:43,044]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Undeployed successfully analytics event store: /home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/eventsink/v1SaleFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:33:43,045]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deploying analytics event store: v1SaleFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:33:43,322]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:33:43,323]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deployed successfully analytics event store: v1SaleFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,121]  INFO {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker} -  v2BuyFull3_1.0.0.json is deleted from the file system {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker}
+TID: [-1234] [] [2016-05-02 12:34:08,123]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream Definition was undeployed successfully : v2BuyFull3_1.0.0.json {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,124]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,141]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : SplitAndPersist.siddhiql, Dependency validation exception: Stream v2BuyFull3:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,142]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_buy.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,144]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :mysql_buy.xml, Stream validation exception : Stream v2BuyFull3:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,145]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : mysql_buy  is in inactive state because stream dependency could not be found : v2BuyFull3:1.0.0 {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 12:34:08,146]  INFO {org.wso2.carbon.event.stream.core.internal.CarbonEventStreamService} -  Stream definition - v2BuyFull3:1.0.0 removed successfully {org.wso2.carbon.event.stream.core.internal.CarbonEventStreamService}
+TID: [-1234] [] [2016-05-02 12:34:08,149]  INFO {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker} -  Stream definition configuration for v2BuyFull3:1.0.0 saved in the filesystem {org.wso2.carbon.event.stream.core.internal.util.helper.EventStreamConfigurationFileSystemInvoker}
+TID: [-1234] [] [2016-05-02 12:34:08,151]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,184]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:34:08,185]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:34:08,232]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:34:08,232]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : SplitAndPersist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,232]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_buy.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,234]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:34:08,235]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : mysql_buy {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 12:34:08,235]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 12:34:13,369]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Undeploying analytics event store: /home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/eventsink/v2BuyFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:34:13,370]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Undeployed successfully analytics event store: /home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/eventsink/v2BuyFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:34:13,370]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deploying analytics event store: v2BuyFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:34:13,442]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 12:34:13,442]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deployed successfully analytics event store: v2BuyFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 12:34:17,628] ERROR {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Record Count/Page size is ZERO!. Please set Record count/Page size. {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+TID: [-1234] [] [2016-05-02 12:34:17,738] ERROR {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Error in index search: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer}
+java.lang.IllegalArgumentException: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:170)
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:154)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.getTopDocsCollector(AnalyticsDataIndexer.java:525)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.doSearch(AnalyticsDataIndexer.java:470)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.search(AnalyticsDataIndexer.java:447)
+	at org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl.search(AnalyticsDataServiceImpl.java:977)
+	at org.wso2.carbon.analytics.dataservice.core.SecureAnalyticsDataServiceImpl.search(SecureAnalyticsDataServiceImpl.java:229)
+	at org.wso2.carbon.analytics.api.CarbonAnalyticsAPI.search(CarbonAnalyticsAPI.java:661)
+	at org.wso2.carbon.analytics.restapi.resources.AnalyticsResource.search(AnalyticsResource.java:727)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:188)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:104)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:204)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:94)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:272)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:249)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:248)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:222)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:153)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:171)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:289)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:209)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:265)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:613)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.event.receiver.core.internal.tenantmgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:48)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+TID: [-1234] [] [2016-05-02 12:34:17,742] ERROR {org.wso2.carbon.analytics.restapi.providers.AnalyticsIndexExceptionMapper} -  Error accessing Analytics Indexing REST APIs {org.wso2.carbon.analytics.restapi.providers.AnalyticsIndexExceptionMapper}
+org.wso2.carbon.analytics.dataservice.commons.exception.AnalyticsIndexException: Error in index search: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.doSearch(AnalyticsDataIndexer.java:484)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.search(AnalyticsDataIndexer.java:447)
+	at org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl.search(AnalyticsDataServiceImpl.java:977)
+	at org.wso2.carbon.analytics.dataservice.core.SecureAnalyticsDataServiceImpl.search(SecureAnalyticsDataServiceImpl.java:229)
+	at org.wso2.carbon.analytics.api.CarbonAnalyticsAPI.search(CarbonAnalyticsAPI.java:661)
+	at org.wso2.carbon.analytics.restapi.resources.AnalyticsResource.search(AnalyticsResource.java:727)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:188)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:104)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:204)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:101)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:94)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:272)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:249)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:248)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:222)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:153)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:171)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:289)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:209)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:265)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:613)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.event.receiver.core.internal.tenantmgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:48)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:170)
+	at org.apache.lucene.search.TopScoreDocCollector.create(TopScoreDocCollector.java:154)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.getTopDocsCollector(AnalyticsDataIndexer.java:525)
+	at org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer.doSearch(AnalyticsDataIndexer.java:470)
+	... 55 more
+TID: [-1234] [] [2016-05-02 13:02:52,652]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 13:34:34,627]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 13:54:26,319]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 14:08:47,954]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-02 14:08:47,978]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Data Analytics Server... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-02 14:08:47,998]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:48,009]  INFO {org.wso2.carbon.core.ServerManagement} -  Stopped all transport listeners {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:48,009]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for request service completion... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:48,064]  INFO {org.wso2.carbon.core.ServerManagement} -  All requests have been served. {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:48,064]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for deployment completion... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:48,085]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Fri Apr 29 11:30:10 IST 2016]; root of context hierarchy {org.springframework.web.context.support.XmlWebApplicationContext}
+TID: [-1234] [] [2016-05-02 14:08:48,134]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@26b0de5c: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,analyticsServices,analyticsBean,analyticsExceptionMapper,analyticsIndexExceptionMapper,analyticsTableNotFoundExceptionMapper,analyticsTimeoutExceptionMapper,jacksonJsonProvider,httpHeadersOutInterceptor]; root of factory hierarchy {org.springframework.beans.factory.support.DefaultListableBeanFactory}
+TID: [-1234] [] [2016-05-02 14:08:48,451]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/analytics] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2016-05-02 14:08:48,839]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2016-05-02 14:08:48,902]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/inputwebsocket] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2016-05-02 14:08:49,121]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputui] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2016-05-02 14:08:49,164]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputwebsocket] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2016-05-02 14:08:49,257]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2016-05-02 14:08:49,287]  INFO {org.wso2.carbon.core.ServerManagement} -  All deployment tasks have been completed. {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:49,288]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for server task completion... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:49,373]  INFO {org.wso2.carbon.core.ServerManagement} -  All server tasks have been completed. {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2016-05-02 14:08:49,373]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down WSO2 Data Analytics Server... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-02 14:08:49,374]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down OSGi framework... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-02 14:08:49,591]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver undeployed successfully: ERBuy.xml {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,607]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event receiver deployment held back and in inactive state: ERBuy.xml, waiting for Input Event Adapter dependency: wso2event {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,607]  INFO {org.wso2.carbon.event.receiver.core.internal.CarbonEventReceiverService} -  Event receiver : ERBuy in inactive state because dependency could not be found: wso2event {org.wso2.carbon.event.receiver.core.internal.CarbonEventReceiverService}
+TID: [-1234] [] [2016-05-02 14:08:49,608]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver undeployed successfully: ERSale.xml {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,609]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event receiver deployment held back and in inactive state: ERSale.xml, waiting for Input Event Adapter dependency: wso2event {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,610]  INFO {org.wso2.carbon.event.receiver.core.internal.CarbonEventReceiverService} -  Event receiver : ERSale in inactive state because dependency could not be found: wso2event {org.wso2.carbon.event.receiver.core.internal.CarbonEventReceiverService}
+TID: [-1234] [] [2016-05-02 14:08:49,610]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver undeployed successfully: tweetRev.xml {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,611]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event receiver deployment held back and in inactive state: tweetRev.xml, waiting for Input Event Adapter dependency: wso2event {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,612]  INFO {org.wso2.carbon.event.receiver.core.internal.CarbonEventReceiverService} -  Event receiver : tweetRev in inactive state because dependency could not be found: wso2event {org.wso2.carbon.event.receiver.core.internal.CarbonEventReceiverService}
+TID: [-1234] [] [2016-05-02 14:08:49,647]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : Matched_Pub.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,653]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : Matched_Pub.xml, waiting for Output Event Adapter dependency : logger {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,653]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : Matched_Pub  is in inactive state because dependency could not be found : logger {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 14:08:49,654]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : relatedPub.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,664]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : relatedPub.xml, waiting for Output Event Adapter dependency : logger {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,664]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : relatedPub  is in inactive state because dependency could not be found : logger {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 14:08:49,679]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : tomysql.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,681]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : tomysql.xml, waiting for Output Event Adapter dependency : rdbms {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,682]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : tomysql  is in inactive state because dependency could not be found : rdbms {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 14:08:49,682]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_sale.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,684]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : mysql_sale.xml, waiting for Output Event Adapter dependency : rdbms {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,684]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : mysql_sale  is in inactive state because dependency could not be found : rdbms {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 14:08:49,684]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : tweet_mysql.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,691]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : tweet_mysql.xml, waiting for Output Event Adapter dependency : rdbms {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,692]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : tweet_mysql  is in inactive state because dependency could not be found : rdbms {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 14:08:49,692]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_buy.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,694]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : mysql_buy.xml, waiting for Output Event Adapter dependency : rdbms {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:08:49,694]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : mysql_buy  is in inactive state because dependency could not be found : rdbms {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService}
+TID: [-1234] [] [2016-05-02 14:08:49,726]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiverServiceComponent} -  Binary Data Receiver server shutting down... {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiverServiceComponent}
+TID: [-1234] [] [2016-05-02 14:08:49,728]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Stopping Binary Server.. {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver}
+TID: [-1234] [] [2016-05-02 14:08:49,730]  INFO {org.wso2.carbon.databridge.receiver.thrift.internal.ThriftDataReceiverDS} -  Thrift server shutting down... {org.wso2.carbon.databridge.receiver.thrift.internal.ThriftDataReceiverDS}
+TID: [-1234] [] [2016-05-02 14:08:49,913]  INFO {org.wso2.carbon.event.processor.core.internal.CarbonEventProcessorService} -  Successfully shutdown ExecutionPlans {org.wso2.carbon.event.processor.core.internal.CarbonEventProcessorService}
+TID: [-1234] [] [2016-05-02 14:08:49,958]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Stopping CarbonServerManager... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-02 14:08:52,466]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} -  Stopping the carbon web-app registered under : / {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent}
+TID: [-1234] [] [2016-05-02 14:08:52,580]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-05-02 14:08:52,582]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-05-02 14:08:54,017]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2016-05-02 14:08:54,017]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1] [] [2016-05-02 14:09:58,075]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1234776885/ {org.apache.axiom.util.stax.dialect.StAXDialectDetector}
+TID: [-1] [] [2016-05-02 14:09:58,056]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1234776885/ {org.apache.axiom.util.stax.dialect.StAXDialectDetector}
+TID: [-1234] [] [2016-05-02 14:09:58,733]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,737]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.19.0-49-generic, amd64 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,737]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/java-8-oracle/jre {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,737]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.8.0_72 {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,737]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 25.72-b15,Oracle Corporation {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,738]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/rilfi/wso2das-3.0.2-SNAPSHOT {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,738]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/rilfi/wso2das-3.0.2-SNAPSHOT/tmp {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:58,738]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : rilfi, en-US, Asia/Colombo {org.wso2.carbon.core.internal.CarbonCoreActivator}
+TID: [-1234] [] [2016-05-02 14:09:59,054]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter}
+TID: [-1] [] [2016-05-02 14:09:59,246]  INFO {org.wso2.carbon.event.execution.manager.core.internal.ds.TemplateDeployerServiceTrackerDS} -  Successfully deployed the execution manager tracker service {org.wso2.carbon.event.execution.manager.core.internal.ds.TemplateDeployerServiceTrackerDS}
+TID: [-1] [] [2016-05-02 14:09:59,559]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS}
+TID: [-1] [] [2016-05-02 14:09:59,711]  INFO {org.wso2.carbon.event.processor.manager.core.internal.util.ManagementModeConfigurationLoader} -  CEP started in Single node mode {org.wso2.carbon.event.processor.manager.core.internal.util.ManagementModeConfigurationLoader}
+TID: [-1234] [] [2016-05-02 14:10:06,521]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Started Binary SSL Transport on port : 9711 {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver}
+TID: [-1234] [] [2016-05-02 14:10:06,526]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Started Binary TCP Transport on port : 9611 {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver}
+TID: [-1234] [] [2016-05-02 14:10:06,547]  INFO {org.wso2.carbon.databridge.core.internal.DataBridgeDS} -  Successfully deployed Agent Server  {org.wso2.carbon.databridge.core.internal.DataBridgeDS}
+TID: [-1234] [] [2016-05-02 14:10:07,031]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 163ms {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService}
+TID: [-1234] [] [2016-05-02 14:10:07,446]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent}
+TID: [-1234] [] [2016-05-02 14:10:11,680]  INFO {org.wso2.carbon.metrics.impl.util.JmxReporterBuilder} -  Creating JMX reporter for Metrics with domain 'org.wso2.carbon.metrics' {org.wso2.carbon.metrics.impl.util.JmxReporterBuilder}
+TID: [-1234] [] [2016-05-02 14:10:11,688]  INFO {org.wso2.carbon.metrics.impl.util.JDBCReporterBuilder} -  Creating JDBC reporter for Metrics with source 'ubuntu', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period {org.wso2.carbon.metrics.impl.util.JDBCReporterBuilder}
+TID: [-1234] [] [2016-05-02 14:10:11,691]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-05-02 14:10:11,777]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics {org.wso2.carbon.metrics.impl.reporter.AbstractReporter}
+TID: [-1234] [] [2016-05-02 14:10:16,335]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} -  Default Embedded Solr Server Initialized {org.wso2.carbon.registry.indexing.solr.SolrClient}
+TID: [-1234] [] [2016-05-02 14:10:17,084]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent}
+TID: [-1] [] [2016-05-02 14:10:30,840]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined {org.apache.catalina.startup.TaglibUriRule}
+TID: [-1234] [] [2016-05-02 14:10:32,184]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled {org.apache.axis2.deployment.ClusterBuilder}
+TID: [-1234] [] [2016-05-02 14:10:32,432]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
+TID: [-1234] [] [2016-05-02 14:10:32,432]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer}
+TID: [-1234] [] [2016-05-02 14:10:32,561]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v16 - file:/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/client/modules/addressing-1.6.1-wso2v16.mar {org.apache.axis2.deployment.ModuleDeployer}
+TID: [-1234] [] [2016-05-02 14:10:34,634]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.tryit-4.4.8 -  {org.apache.axis2.deployment.DeploymentEngine}
+TID: [-1234] [] [2016-05-02 14:10:35,177]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/ {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1] [] [2016-05-02 14:10:35,198]  INFO {org.wso2.carbon.event.input.adapter.kafka.internal.ds.KafkaEventAdapterServiceHolder} -  Kafka input event adaptor waiting for dependent configurations to load {org.wso2.carbon.event.input.adapter.kafka.internal.ds.KafkaEventAdapterServiceHolder}
+TID: [-1234] [] [2016-05-02 14:10:35,333]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig}
+TID: [-1234] [] [2016-05-02 14:10:35,361]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 {org.wso2.carbon.core.internal.permission.update.PermissionUpdater}
+TID: [-1234] [] [2016-05-02 14:10:35,631]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9763 {org.wso2.carbon.core.transports.http.HttpTransportListener}
+TID: [-1234] [] [2016-05-02 14:10:35,632]  INFO {org.wso2.carbon.core.transports.http.HttpsTransportListener} -  HTTPS port       : 9443 {org.wso2.carbon.core.transports.http.HttpsTransportListener}
+TID: [-1234] [] [2016-05-02 14:10:35,687]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :Matched_Pub.xml, Stream validation exception : Stream matchingStream:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,689]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :mysql_buy.xml, Stream validation exception : Stream v2BuyFull3:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,690]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :mysql_sale.xml, Stream validation exception : Stream v1SaleFull3:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,691]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :relatedPub.xml, Stream validation exception : Stream RelatedStream:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,693]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :tomysql.xml, Stream validation exception : Stream matchingStream:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,695]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :tweet_mysql.xml, Stream validation exception : Stream tweetwithID:1.0.0 does not exist {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,707]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event receiver deployment held back and in inactive state: ERBuy.xml, Stream validation exception: Stream RelatedStreamBuy:1.0.0 does not exist {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,709]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event receiver deployment held back and in inactive state: ERSale.xml, Stream validation exception: Stream RelatedStreamSale:1.0.0 does not exist {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,710]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event receiver deployment held back and in inactive state: tweetRev.xml, Stream validation exception: Stream InputStream:1.0.0 does not exist {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,963]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : RTSTATEPART1.siddhiql, Dependency validation exception: Stream RT_Buy:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:35,988]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : R_H_Match.siddhiql, Dependency validation exception: Stream RelatedStream:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,005]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : SplitAndPersist.siddhiql, Dependency validation exception: Stream InputStream:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,012]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : TweetOnly.siddhiql, Dependency validation exception: Stream tweetwithID:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,019]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : compineRelated_S+B.siddhiql, Dependency validation exception: Stream RelatedStreamBuy:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,075]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,091]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : SplitAndPersist.siddhiql, Dependency validation exception: Stream v1SaleFull3:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,104]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver undeployed successfully: tweetRev.xml {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,116]  INFO {org.wso2.carbon.event.input.adapter.core.internal.InputAdapterRuntime} -  Connecting receiver tweetRev {org.wso2.carbon.event.input.adapter.core.internal.InputAdapterRuntime}
+TID: [-1234] [] [2016-05-02 14:10:36,124]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,124]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver configuration successfully deployed and in active state: tweetRev {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,125]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : InputStream:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,129]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : RTSTATEPART1.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,171]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : RTSTATEPART1.siddhiql, Dependency validation exception: Stream RT_Sale:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,172]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : RT_Buy:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,188]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : RTSTATEPART1.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,370]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:RT_Buy:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,371]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:RT_Sale:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,456]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,457]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : RTSTATEPART1 {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,457]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : RT_Sale:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,459]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : compineRelated_S+B.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,477]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : compineRelated_S+B.siddhiql, Dependency validation exception: Stream RelatedStream:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,491]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver undeployed successfully: ERBuy.xml {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,495]  INFO {org.wso2.carbon.event.input.adapter.core.internal.InputAdapterRuntime} -  Connecting receiver ERBuy {org.wso2.carbon.event.input.adapter.core.internal.InputAdapterRuntime}
+TID: [-1234] [] [2016-05-02 14:10:36,612]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:RelatedStreamBuy:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,616]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver configuration successfully deployed and in active state: ERBuy {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,621]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : RelatedStreamBuy:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,631]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver undeployed successfully: ERSale.xml {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,633]  INFO {org.wso2.carbon.event.input.adapter.core.internal.InputAdapterRuntime} -  Connecting receiver ERSale {org.wso2.carbon.event.input.adapter.core.internal.InputAdapterRuntime}
+TID: [-1234] [] [2016-05-02 14:10:36,633]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:RelatedStreamSale:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,633]  INFO {org.wso2.carbon.event.receiver.core.EventReceiverDeployer} -  Event Receiver configuration successfully deployed and in active state: ERSale {org.wso2.carbon.event.receiver.core.EventReceiverDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,634]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : RelatedStreamSale:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,654]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : R_H_Match.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,659]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : R_H_Match.siddhiql, Dependency validation exception: Stream matchingStream:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,662]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : compineRelated_S+B.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,879]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:RelatedStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,933]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:RelatedStreamBuy:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,936]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:RelatedStreamSale:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,936]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : compineRelated_S+B {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,945]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : relatedPub.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,988]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:RelatedStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:36,995]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : relatedPub {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:36,995]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : RelatedStream:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:37,006]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : R_H_Match.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:37,347]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:matchingStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:37,373]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:RelatedStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:37,373]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:37,373]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : R_H_Match {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:37,373]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : Matched_Pub.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:37,375]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:matchingStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:37,375]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : Matched_Pub {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:37,375]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : tomysql.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:37,378]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:matchingStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:38,375]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : tomysql {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,375]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : matchingStream:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,379]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : TweetOnly.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,535]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:tweetwithID:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:38,555]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:38,555]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : TweetOnly {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,555]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : tweet_mysql.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,557]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:tweetwithID:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:38,561]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : tweet_mysql {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,561]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : tweetwithID:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,563]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : v1SaleFull1:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,570]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,576]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan deployment held back and in inactive state : SplitAndPersist.siddhiql, Dependency validation exception: Stream v2BuyFull3:1.0.0 does not exist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,579]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_sale.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,584]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:38,627]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : mysql_sale {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,628]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,629]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : v2BuyFull1:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,694]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : SplitAndPersist.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:38,877]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:38,892]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:39,042]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:39,048]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : SplitAndPersist {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:10:39,048]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : mysql_buy.xml {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:39,049]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:10:39,050]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : mysql_buy {org.wso2.carbon.event.publisher.core.EventPublisherDeployer}
+TID: [-1234] [] [2016-05-02 14:10:39,051]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.EventStreamDeployer}
+TID: [-1234] [] [2016-05-02 14:10:44,419]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Mon May 02 14:10:44 IST 2016]; root of context hierarchy {org.springframework.web.context.support.XmlWebApplicationContext}
+TID: [-1234] [] [2016-05-02 14:10:44,531]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-05-02 14:10:44,705]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/analytics/WEB-INF/cxf-servlet.xml] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+TID: [-1234] [] [2016-05-02 14:10:44,922]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2204e167: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,analyticsServices,analyticsBean,analyticsExceptionMapper,analyticsIndexExceptionMapper,analyticsTableNotFoundExceptionMapper,analyticsTimeoutExceptionMapper,jacksonJsonProvider,httpHeadersOutInterceptor]; root of factory hierarchy {org.springframework.beans.factory.support.DefaultListableBeanFactory}
+TID: [-1234] [] [2016-05-02 14:10:45,807]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-05-02 14:10:45,982]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/analytics].File[/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/webapps/analytics.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-05-02 14:10:46,126]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/inputwebsocket].File[/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/webapps/inputwebsocket.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-05-02 14:10:47,272]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / {org.apache.cxf.endpoint.ServerImpl}
+TID: [-1234] [] [2016-05-02 14:10:47,451]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputui].File[/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/webapps/outputui.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-05-02 14:10:47,628]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputwebsocket].File[/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/webapps/outputwebsocket.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-05-02 14:10:52,849]  INFO {net.sf.ehcache.pool.sizeof.filter.AnnotationSizeOfFilter} -  Using regular expression provided through VM argument net.sf.ehcache.pool.sizeof.ignore.pattern for IgnoreSizeOf annotation : ^.*cache\..*IgnoreSizeOf$ {net.sf.ehcache.pool.sizeof.filter.AnnotationSizeOfFilter}
+TID: [-1234] [] [2016-05-02 14:10:52,856]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  Using user supplied filter @ jar:file:/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/webapps/shindig/WEB-INF/lib/shindig-common-2.5.2.jar!/org/apache/shindig/common/cache/ehcache/SizeOfFilter.txt {net.sf.ehcache.pool.impl.DefaultSizeOfEngine}
+TID: [-1234] [] [2016-05-02 14:10:52,885]  INFO {net.sf.ehcache.pool.sizeof.JvmInformation} -  Detected JVM data model settings of: 64-Bit HotSpot JVM with Compressed OOPs {net.sf.ehcache.pool.sizeof.JvmInformation}
+TID: [-1234] [] [2016-05-02 14:10:53,149]  INFO {net.sf.ehcache.pool.sizeof.AgentLoader} -  Extracted agent jar to temporary file /home/rilfi/wso2das-3.0.2-SNAPSHOT/tmp/ehcache-sizeof-agent4149997503306643161.jar {net.sf.ehcache.pool.sizeof.AgentLoader}
+TID: [-1234] [] [2016-05-02 14:10:53,150]  INFO {net.sf.ehcache.pool.sizeof.AgentLoader} -  Trying to load agent @ /home/rilfi/wso2das-3.0.2-SNAPSHOT/tmp/ehcache-sizeof-agent4149997503306643161.jar {net.sf.ehcache.pool.sizeof.AgentLoader}
+TID: [-1234] [] [2016-05-02 14:10:53,161]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  using Agent sizeof engine {net.sf.ehcache.pool.impl.DefaultSizeOfEngine}
+TID: [-1234] [] [2016-05-02 14:10:53,378]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  using Agent sizeof engine {net.sf.ehcache.pool.impl.DefaultSizeOfEngine}
+TID: [-1234] [] [2016-05-02 14:10:53,460]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features/features.txt are loading. {org.apache.shindig.gadgets.features.FeatureRegistry}
+TID: [-1234] [] [2016-05-02 14:10:53,476]  INFO {org.apache.shindig.common.xml.XmlUtil} -  The XML processor being used does not support secure parsing. {org.apache.shindig.common.xml.XmlUtil}
+TID: [-1234] [] [2016-05-02 14:10:53,478]  INFO {org.apache.shindig.common.xml.XmlUtil} -  Document builders are being reused. {org.apache.shindig.common.xml.XmlUtil}
+TID: [-1234] [] [2016-05-02 14:10:53,935]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features-extras/features.txt are loading. {org.apache.shindig.gadgets.features.FeatureRegistry}
+TID: [-1234] [] [2016-05-02 14:10:57,784]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Resources from containers/default/container.js are loading. {org.apache.shindig.config.JsonContainerConfigLoader}
+TID: [-1234] [] [2016-05-02 14:10:57,785]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Container configuration containers/default/container.js is being read. {org.apache.shindig.config.JsonContainerConfigLoader}
+TID: [-1234] [] [2016-05-02 14:10:58,304]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  Using random key for OAuth2 client-side state encryption {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger}
+TID: [-1234] [] [2016-05-02 14:10:58,305]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  OAuth2CrypterProvider constructor {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger}
+TID: [-1234] [] [2016-05-02 14:10:58,320]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider} -  Using random key for OAuth client-side state encryption {org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider}
+TID: [-1234] [] [2016-05-02 14:10:58,321]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  A random key for OAuth client-side state encryption is being used. {org.apache.shindig.gadgets.oauth.OAuthModule}
+TID: [-1234] [] [2016-05-02 14:10:58,323]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  The OAuth signing key from res://wso2carbon.pem is loading. {org.apache.shindig.gadgets.oauth.OAuthModule}
+TID: [-1234] [] [2016-05-02 14:10:58,627]  INFO {org.apache.shiro.realm.AuthorizingRealm} -  No cache or cacheManager properties have been set.  Authorization cache cannot be obtained. {org.apache.shiro.realm.AuthorizingRealm}
+TID: [-1234] [] [2016-05-02 14:10:58,627]  INFO {org.apache.shiro.config.IniSecurityManagerFactory} -  Realms have been explicitly set on the SecurityManager instance - auto-setting of realms will not occur. {org.apache.shiro.config.IniSecurityManagerFactory}
+TID: [-1234] [] [2016-05-02 14:10:58,662]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig].File[/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/webapps/shindig.war] {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer}
+TID: [-1234] [] [2016-05-02 14:11:00,572]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal].File[/home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/deployment/server/jaggeryapps/portal] {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer}
+TID: [-1234] [] [2016-05-02 14:11:00,694]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift Server started at 0.0.0.0 {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver}
+TID: [-1234] [] [2016-05-02 14:11:00,721]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift SSL port : 7711 {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver}
+TID: [-1234] [] [2016-05-02 14:11:00,746]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift port : 7611 {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver}
+TID: [-1234] [] [2016-05-02 14:11:00,792]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read {org.apache.tomcat.util.net.NioSelectorPool}
+TID: [-1234] [] [2016-05-02 14:11:00,883]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read {org.apache.tomcat.util.net.NioSelectorPool}
+TID: [-1234] [] [2016-05-02 14:11:01,042]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} -  Task service starting in STANDALONE mode... {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl}
+TID: [-1234] [] [2016-05-02 14:11:05,030]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.IndexNodeCoordinator} -  Indexing Initialized: STANDALONE | Current Node Indexing: Yes {org.wso2.carbon.analytics.dataservice.core.indexing.IndexNodeCoordinator}
+TID: [-1234] [] [2016-05-02 14:11:05,033]  INFO {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl} -  Data purging is enabled in this node {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl}
+TID: [-1234] [] [2016-05-02 14:11:05,148]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Loading Spark defaults from /home/rilfi/wso2das-3.0.2-SNAPSHOT/repository/conf/analytics/spark/spark-defaults.conf {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-05-02 14:11:05,589]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Starting SPARK in the LOCAL mode... {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-05-02 14:11:05,947]  WARN {org.apache.hadoop.util.NativeCodeLoader} -  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable {org.apache.hadoop.util.NativeCodeLoader}
+TID: [-1234] [] [2016-05-02 14:11:06,110]  WARN {org.apache.spark.util.Utils} -  Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 192.168.80.128 instead (on interface eth0) {org.apache.spark.util.Utils}
+TID: [-1234] [] [2016-05-02 14:11:06,112]  WARN {org.apache.spark.util.Utils} -  Set SPARK_LOCAL_IP if you need to bind to another address {org.apache.spark.util.Utils}
+TID: [-1] [] [2016-05-02 14:11:06,721]  INFO {Remoting} -  Starting remoting {Remoting}
+TID: [-1] [] [2016-05-02 14:11:06,996]  INFO {Remoting} -  Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.80.128:13000] {Remoting}
+TID: [-1234] [] [2016-05-02 14:11:09,049]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Started Spark CLIENT in the LOCAL mode with the application name : CarbonAnalytics and UI port : 4040 {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor}
+TID: [-1234] [] [2016-05-02 14:11:09,237]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi {org.wso2.carbon.core.init.JMXServerManager}
+TID: [-1234] [] [2016-05-02 14:11:09,241]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deploying analytics event store: v1SaleFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 14:11:09,295]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Data Analytics Server-3.0.1 {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
+TID: [-1234] [] [2016-05-02 14:11:09,296]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 80 sec {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent}
+TID: [-1234] [] [2016-05-02 14:11:09,464]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v1SaleFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:11:09,465]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deployed successfully analytics event store: v1SaleFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 14:11:09,465]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deploying analytics event store: v2BuyFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 14:11:09,523]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:v2BuyFull3:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:11:09,524]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deployed successfully analytics event store: v2BuyFull3.xml {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer}
+TID: [-1234] [] [2016-05-02 14:11:10,082]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://192.168.80.128:9443/carbon/ {org.wso2.carbon.ui.internal.CarbonUIServiceComponent}
+TID: [-1] [] [2016-05-02 14:11:15,196]  INFO {org.wso2.carbon.event.processor.manager.core.internal.CarbonEventManagementService} -  Starting polling event receivers {org.wso2.carbon.event.processor.manager.core.internal.CarbonEventManagementService}
+TID: [-1234] [] [2016-05-02 14:11:34,397]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2016-05-02 14:11:34,394+0530] {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil}
+TID: [-1234] [] [2016-05-02 14:11:51,373]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'admin@carbon.super [-1234]' logged in at [2016-05-02 14:11:51,373+0530] {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil}
+TID: [-1] [] [2016-05-02 14:13:21,679]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1] [] [2016-05-02 14:16:49,672]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 14:16:49,772]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:215,
+product:phone,
+uc1:g1,
+state:buy,
+brand:apple,
+model:iphone 6,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:49,804]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:205,
+product:phone,
+uc1:g1,
+state:buy,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:49,887]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:210,
+product:phone,
+uc1:g1,
+state:buy,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,071]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:208,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,076]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:209,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,077]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:216,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,222]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:203,
+product:phone,
+uc1:g1,
+state:sell,
+brand:samsung,
+model:galaxy note,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,223]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:211,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,224]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:214,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,328]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:202,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,519]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:204,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,519]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:206,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,520]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:207,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:16:51,521]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: related,
+ Event: ID:217,
+product:phone,
+uc1:g1,
+state:sell,
+brand:apple,
+model:iphone 5s,
+type:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:17:01,860]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: Matched_Events,
+ Event: rID:220,
+rproduct:phone,
+ruc1:g1,
+rstate:buy,
+rbrand:apple,
+rmodel:iphone 5s,
+rtype:type,
+hID:217,
+hproduct:phone,
+huc1:g1,
+hstate:sell,
+hbrand:apple,
+hmodel:iphone 5s,
+htype:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:17:23,494]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: Matched_Events,
+ Event: rID:225,
+rproduct:phone,
+ruc1:g1,
+rstate:buy,
+rbrand:apple,
+rmodel:iphone 5s,
+rtype:type,
+hID:217,
+hproduct:phone,
+huc1:g1,
+hstate:sell,
+hbrand:apple,
+hmodel:iphone 5s,
+htype:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:18:01,859]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: Matched_Events,
+ Event: rID:220,
+rproduct:phone,
+ruc1:g1,
+rstate:buy,
+rbrand:apple,
+rmodel:iphone 5s,
+rtype:type,
+hID:217,
+hproduct:phone,
+huc1:g1,
+hstate:sell,
+hbrand:apple,
+hmodel:iphone 5s,
+htype:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:18:23,396]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: Matched_Events,
+ Event: rID:225,
+rproduct:phone,
+ruc1:g1,
+rstate:buy,
+rbrand:apple,
+rmodel:iphone 5s,
+rtype:type,
+hID:217,
+hproduct:phone,
+huc1:g1,
+hstate:sell,
+hbrand:apple,
+hmodel:iphone 5s,
+htype:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:18:24,862]  INFO {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter} -  Unique ID: Matched_Events,
+ Event: rID:230,
+rproduct:phone,
+ruc1:g1,
+rstate:buy,
+rbrand:apple,
+rmodel:iphone 5s,
+rtype:type,
+hID:217,
+hproduct:phone,
+huc1:g1,
+hstate:sell,
+hbrand:apple,
+hmodel:iphone 5s,
+htype:type {org.wso2.carbon.event.output.adapter.logger.LoggerEventAdapter}
+TID: [-1234] [] [2016-05-02 14:19:00,745]  INFO {org.wso2.carbon.event.processor.core.internal.util.EventProcessorConfigurationFilesystemInvoker} -  R_H_Match.siddhiql is deleted from the file system {org.wso2.carbon.event.processor.core.internal.util.EventProcessorConfigurationFilesystemInvoker}
+TID: [-1234] [] [2016-05-02 14:19:00,756]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution Plan was undeployed successfully : R_H_Match.siddhiql {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1234] [] [2016-05-02 14:19:00,763]  INFO {org.wso2.carbon.event.processor.core.internal.util.EventProcessorConfigurationFilesystemInvoker} -  Execution plan configuration for R_H_Match saved in the filesystem {org.wso2.carbon.event.processor.core.internal.util.EventProcessorConfigurationFilesystemInvoker}
+TID: [-1234] [] [2016-05-02 14:19:00,820]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Producer added to the junction. Stream:matchingStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:19:00,872]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:RelatedStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:19:00,904]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  Consumer added to the junction. Stream:InputStream:1.0.0 {org.wso2.carbon.event.stream.core.internal.EventJunction}
+TID: [-1234] [] [2016-05-02 14:19:00,904]  INFO {org.wso2.carbon.event.processor.core.EventProcessorDeployer} -  Execution plan is deployed successfully and in active state  : R_H_Match {org.wso2.carbon.event.processor.core.EventProcessorDeployer}
+TID: [-1] [] [2016-05-02 14:45:19,537]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1] [] [2016-05-02 15:15:43,626]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1] [] [2016-05-02 15:46:08,804]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 16:16:49,562]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 16:48:07,096]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 17:18:39,488]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 17:48:54,050]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 18:21:50,963]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 18:52:07,667]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 19:22:10,793]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 19:53:31,654]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 20:23:54,141]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 20:54:31,393]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}
+TID: [-1234] [] [2016-05-02 21:26:45,316]  INFO {org.wso2.carbon.databridge.core.DataBridge} -  user admin connected {org.wso2.carbon.databridge.core.DataBridge}

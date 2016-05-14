@@ -1,0 +1,29 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('RTSTATEPART')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+
+
+@Import('InputStream:1.0.0')
+define stream r (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+
+
+@Export('RT_Sale:1.0.0')
+define stream RS (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+@Export('RT_Buy:1.0.0')
+define stream RB (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+
+
+from r#window.time(1 min)[state=="buy"]
+select *
+insert into RB;
+from r#window.time(1 min)[state=="sell"]
+select *
+insert into RS;

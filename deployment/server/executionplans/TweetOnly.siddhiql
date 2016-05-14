@@ -1,0 +1,18 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('TweetOnly')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('InputStream:1.0.0')
+define stream ips (ID string, product string, uc1 string, state string, brand string, model string, type string, tweet string);
+
+
+@Export('tweetwithID:1.0.0')
+define stream tw (ID string, tweet string);
+
+From ips
+select ID,tweet
+insert into tw

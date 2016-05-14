@@ -1,0 +1,26 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('RS+HB')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+
+
+
+
+@Import('RelatedStreamBuy:1.0.0')
+define stream HB (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+@Import('RT_Sale:1.0.0')
+define stream RS (ID string, product string, uc1 string, state string, brand string, model string, type string);
+
+@Export('matchingStream:1.0.0')
+define stream m (rID string, rproduct string, ruc1 string, rstate string, rbrand string, rmodel string, rtype string, hID string, hproduct string, huc1 string, hstate string, hbrand string, hmodel string, htype string);
+
+from RS#window.time(1 min) as R 
+  join HB#window.length(1) as H
+  on R.product == H.product and R.brand==H.brand and R.type==H.type
+select R.ID as rID, R.product as rproduct , R.uc1 as ruc1 , R.state as rstate, R.brand as rbrand , R.model as rmodel , R.type as rtype ,H.ID as hID , H.product as hproduct , H.uc1 as huc1 , H.state as hstate , H.brand as hbrand, H.model as hmodel , H.type as htype
+insert into m;

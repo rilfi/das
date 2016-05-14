@@ -1,0 +1,16 @@
+{
+  "name": "tweetwithID",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "ID",
+      "type": "STRING"
+    },
+    {
+      "name": "tweet",
+      "type": "STRING"
+    }
+  ]
+}

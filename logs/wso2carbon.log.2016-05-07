@@ -1,0 +1,27 @@
+TID: [-1234] [] [2016-05-07 08:59:08,347]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'admin@carbon.super [-1234]' logged in at [2016-05-07 08:59:08,345+0530] {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil}
+TID: [-1] [] [2016-05-07 13:05:50,707]  WARN {org.apache.spark.rpc.akka.AkkaRpcEndpointRef} -  Error sending message [message = Heartbeat(driver,[Lscala.Tuple2;@3f3b0326,BlockManagerId(driver, localhost, 12000))] in 1 attempts {org.apache.spark.rpc.akka.AkkaRpcEndpointRef}
+java.util.concurrent.TimeoutException: Futures timed out after [120 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at scala.concurrent.Await$$anonfun$result$1.apply(package.scala:107)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:53)
+	at scala.concurrent.Await$.result(package.scala:107)
+	at org.apache.spark.rpc.RpcEndpointRef.askWithRetry(RpcEndpointRef.scala:102)
+	at org.apache.spark.rpc.RpcEndpointRef.askWithRetry(RpcEndpointRef.scala:78)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$reportHeartBeat(Executor.scala:444)
+	at org.apache.spark.executor.Executor$$anon$1$$anonfun$run$1.apply$mcV$sp(Executor.scala:464)
+	at org.apache.spark.executor.Executor$$anon$1$$anonfun$run$1.apply(Executor.scala:464)
+	at org.apache.spark.executor.Executor$$anon$1$$anonfun$run$1.apply(Executor.scala:464)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1652)
+	at org.apache.spark.executor.Executor$$anon$1.run(Executor.scala:464)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+TID: [-1] [] [2016-05-07 13:05:50,788]  WARN {org.apache.spark.HeartbeatReceiver} -  Removing executor driver with no recent heartbeats: 164574 ms exceeds timeout 120000 ms {org.apache.spark.HeartbeatReceiver}
+TID: [-1] [] [2016-05-07 13:05:50,819] ERROR {org.apache.spark.scheduler.TaskSchedulerImpl} -  Lost an executor driver (already removed): Executor heartbeat timed out after 164574 ms {org.apache.spark.scheduler.TaskSchedulerImpl}
+TID: [-1] [] [2016-05-07 13:45:16,191]  WARN {org.apache.spark.HeartbeatReceiver} -  Removing executor driver with no recent heartbeats: 150711 ms exceeds timeout 120000 ms {org.apache.spark.HeartbeatReceiver}
+TID: [-1] [] [2016-05-07 13:45:16,258] ERROR {org.apache.spark.scheduler.TaskSchedulerImpl} -  Lost an executor driver (already removed): Executor heartbeat timed out after 150711 ms {org.apache.spark.scheduler.TaskSchedulerImpl}

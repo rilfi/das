@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventPublisher name="mysql_buy" statistics="disable" trace="disable" xmlns="http://wso2.org/carbon/eventpublisher">
+  <from streamName="v2BuyFull3" version="1.0.0"/>
+  <mapping customMapping="disable" type="map"/>
+  <to eventAdapterType="rdbms">
+    <property name="datasource.name">WSO2_MYSQL1</property>
+    <property name="execution.mode">insert</property>
+    <property name="table.name">buy</property>
+  </to>
+</eventPublisher>

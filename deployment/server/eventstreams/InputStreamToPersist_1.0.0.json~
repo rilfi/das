@@ -1,0 +1,9 @@
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Basic YW/search -d '{"tableName":"V1SALEFULL3", "query":"product:phone", "start":0, "count":10}' -k
+
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46YWRtaW4=" -v https://localhost:9443/analytics/search_count -d '{"tableName":"V1SALEFULL3", "query":"product:phone"}' -k
+
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46YWRtaW4=" -v https://localhost:9443/analytics/facets -d '{"tableName" : "V1SALEFULL3","fieldName" : "sampleFieldName","categoryPath" : ["parent", "child", "grandChild"],"query" : "timestamp : [1213343534535 TO 465464564644]","scoreFunction" : "weight*popularity"}' -k
+
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46YWRtaW4=" -v https://localhost:9443/analytics/search_count -d '{"tableName":"ORG_WSO2_DAS_SAMPLE_SMART_HOME_DATA", "query":"state:Texas"}' -k
+
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46YWRtaW4=" -v https://localhost:9443/analytics/search -d '{"tableName":"V1SALEFULL3", "query":"product:phone", "start":0, "count":3}' -k
